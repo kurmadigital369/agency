@@ -27,7 +27,7 @@ a{text-decoration:none;color:inherit}
 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* ============ PLAYING CURSOR ============ */
+
 #cursorDot,#cursorRing{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%}
 #cursorDot{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--grad);box-shadow:0 0 12px var(--violet)}
 #cursorRing{width:40px;height:40px;margin:-20px 0 0 -20px;border:1.5px solid rgba(139,92,246,.8);transition:width .3s,height .3s,margin .3s,background .3s,border-color .3s}
@@ -37,7 +37,7 @@ a{text-decoration:none;color:inherit}
 .spark{position:fixed;width:5px;height:5px;margin:-2px 0 0 -2px;border-radius:50%;pointer-events:none;z-index:9997;animation:spark .7s ease-out forwards}
 @keyframes spark{to{transform:translateY(14px) scale(0);opacity:0}}
 
-/* ============ CANVAS / PROGRESS / VEIL ============ */
+
 #bgCanvas{position:fixed;inset:0;z-index:0;opacity:.7}
 #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--grad);transform-origin:0 50%;transform:scaleX(0);z-index:1001}
 #veil{position:fixed;inset:0;z-index:1000;display:flex;pointer-events:none}
@@ -47,7 +47,6 @@ a{text-decoration:none;color:inherit}
 #veil.cover span{transform:scaleY(1)}
 #veil.cover{pointer-events:all}
 
-/* ============ PRELOADER ============ */
 #preloader{position:fixed;inset:0;background:var(--bg);z-index:2000;display:flex;flex-direction:column;gap:22px;align-items:center;justify-content:center;transition:opacity .6s,visibility .6s}
 body.loaded #preloader{opacity:0;visibility:hidden}
 #preloader img{width:90px;animation:float 3s ease-in-out infinite}
@@ -62,7 +61,7 @@ body.loaded #preloader{opacity:0;visibility:hidden}
 .load-bar i{display:block;height:100%;background:var(--grad);animation:load 1.4s ease forwards}
 @keyframes load{from{width:0}to{width:100%}}
 
-/* ============ NAV ============ */
+
 header{position:fixed;top:0;left:0;right:0;z-index:900;transition:background .4s,box-shadow .4s;padding:16px 0}
 header.scrolled{background:rgba(7,7,15,.85);backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.4)}
 .nav{display:flex;align-items:center;justify-content:space-between}
@@ -81,7 +80,7 @@ body.menu-open #burger i{background:transparent}
 body.menu-open #burger i::before{transform:translateY(7px) rotate(45deg)}
 body.menu-open #burger i::after{transform:translateY(-7px) rotate(-45deg)}
 
-/* ============ PAGES ============ */
+
 main{position:relative;z-index:1}
 .page{display:none;padding-top:110px;min-height:100vh}
 .page.active{display:block;animation:pageIn .7s ease both}
@@ -94,7 +93,7 @@ main{position:relative;z-index:1}
 .sec-head h2{font-size:clamp(28px,4.5vw,46px);font-weight:900}
 .sec-head p{color:var(--muted);max-width:620px;margin:14px auto 0}
 
-/* ============ BUTTONS ============ */
+
 .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:99px;font-weight:700;font-family:'Space Grotesk';border:0;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
 .btn.primary{background:var(--grad);background-size:200%;color:#0b0b16;animation:gradMove 4s linear infinite}
 @keyframes gradMove{to{background-position:200%}}
@@ -104,7 +103,7 @@ main{position:relative;z-index:1}
 .btn.ghost{border:1.5px solid var(--line);color:var(--text)}
 .btn.ghost:hover{border-color:var(--cyan);color:var(--cyan)}
 
-/* ============ HOME ============ */
+
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;min-height:calc(100vh - 110px)}
 .badge{display:inline-block;padding:8px 18px;border-radius:99px;background:rgba(139,92,246,.15);border:1px solid var(--line);color:var(--pink);font-size:14px;margin-bottom:22px}
 .hero h1{font-size:clamp(34px,5.6vw,68px);font-weight:900;line-height:1.08}
@@ -132,7 +131,7 @@ main{position:relative;z-index:1}
 .clients span{opacity:.6;transition:.3s}
 .clients span:hover{opacity:1;color:var(--cyan);transform:scale(1.1)}
 
-/* ============ CARDS / GRIDS ============ */
+
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:80px}
 .grid2 img{border-radius:24px;border:1px solid var(--line)}
 .grid2 h3{font-size:26px;margin-bottom:16px}
@@ -158,7 +157,7 @@ main{position:relative;z-index:1}
 .member h5{font-size:16px}
 .member small{color:var(--cyan)}
 
-/* ============ WORK ============ */
+
 .filters{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
 .f-btn{padding:10px 24px;border-radius:99px;border:1px solid var(--line);background:none;color:var(--muted);font-family:'Space Grotesk';font-weight:700;transition:.3s}
 .f-btn.on,.f-btn:hover{background:var(--grad);color:#0b0b16;border-color:transparent}
@@ -174,7 +173,7 @@ main{position:relative;z-index:1}
 .w-view{position:absolute;top:14px;right:14px;width:48px;height:48px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-size:20px;transform:scale(0) rotate(-90deg);transition:.4s}
 .work-card:hover .w-view{transform:scale(1) rotate(0)}
 
-/* ============ PRICING ============ */
+
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;align-items:stretch;margin-bottom:70px}
 .plan{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:38px 30px;display:flex;flex-direction:column;transition:.4s}
 .plan:hover{transform:translateY(-10px)}
@@ -194,7 +193,7 @@ main{position:relative;z-index:1}
 .quote b{display:block;margin-top:18px;color:var(--pink)}
 .stars{color:var(--lime);margin-bottom:12px;letter-spacing:3px}
 
-/* ============ CONTACT ============ */
+
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;margin-bottom:80px}
 .c-card{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px;transition:.3s}
 .c-card:hover{transform:translateX(10px);border-color:var(--violet)}
@@ -207,7 +206,7 @@ form{background:var(--card);border:1px solid var(--line);border-radius:24px;padd
 #toast{position:fixed;bottom:30px;left:50%;transform:translate(-50%,120px);background:var(--grad);color:#0b0b16;font-weight:700;padding:16px 30px;border-radius:99px;z-index:1500;transition:transform .5s cubic-bezier(.2,1.4,.4,1)}
 #toast.show{transform:translate(-50%,0)}
 
-/* ============ FOOTER ============ */
+
 footer{border-top:1px solid var(--line);padding:50px 0 30px;position:relative;z-index:1;background:rgba(7,7,15,.8)}
 .f-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
 .socials{display:flex;gap:12px}
@@ -215,7 +214,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px;position:relative;z-
 .socials a:hover{background:var(--grad);color:#0b0b16;transform:translateY(-6px) rotate(8deg)}
 .copy{text-align:center;color:var(--muted);margin-top:30px;font-size:14px}
 
-/* ============ RESPONSIVE ============ */
+
 @media(max-width:960px){
   .hero,.grid2,.contact-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
@@ -229,20 +228,20 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px;position:relative;z-
 </head>
 <body>
 
-<!-- PRELOADER -->
+
 <div id="preloader">
   <img src="img/logo.png" alt="Kurma">
   <div class="load-word"><b>K</b><b>U</b><b>R</b><b>M</b><b>A</b></div>
   <div class="load-bar"><i></i></div>
 </div>
 
-<!-- CURSOR / BG / PROGRESS / VEIL -->
+
 <div id="cursorDot"></div><div id="cursorRing"></div>
 <canvas id="bgCanvas"></canvas>
 <div id="progress"></div>
 <div id="veil"><span></span><span></span><span></span><span></span><span></span></div>
 
-<!-- NAV -->
+
 <header id="header">
   <div class="wrap nav">
     <a href="#home" class="logo"><img src="img/logo.png" alt="Kurma logo"><span class="logo-txt">KUR<span class="grad">MA</span></span></a>
@@ -259,7 +258,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px;position:relative;z-
 </header>
 
 <main>
-<!-- ================= PAGE 1 : HOME ================= -->
+
 <section id="home" class="page active">
   <div class="wrap">
     <div class="hero">
@@ -334,7 +333,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px;position:relative;z-
   </div>
 </section>
 
-<!-- ================= PAGE 3 : SERVICES ================= -->
+
 <section id="services" class="page">
   <div class="wrap">
     <div class="sec-head reveal"><span class="kicker">What We Do</span><h2>Services That <span class="grad">Compound</span></h2><p>Six weapons. One goal: unstoppable, measurable growth for your brand.</p></div>
@@ -356,7 +355,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px;position:relative;z-
   </div>
 </section>
 
-<!-- ================= PAGE 4 : WORK ================= -->
+
 <section id="work" class="page">
   <div class="wrap">
     <div class="sec-head reveal"><span class="kicker">Case Studies</span><h2>Work That <span class="grad">Wins</span></h2><p>Real brands. Real numbers. Hover to feel the magic.</p></div>
@@ -376,7 +375,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px;position:relative;z-
   </div>
 </section>
 
-<!-- ================= PAGE 5 : PRICING ================= -->
+
 <section id="pricing" class="page">
   <div class="wrap">
     <div class="sec-head reveal"><span class="kicker">Pricing</span><h2>Invest In <span class="grad">Growth</span></h2><p>No hidden fees. No lock-ins. Cancel anytime (you won't).</p></div>
